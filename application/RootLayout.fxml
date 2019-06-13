@@ -7,9 +7,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<BorderPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <center>
-      <GridPane gridLinesVisible="true" BorderPane.alignment="CENTER">
+      <GridPane gridLinesVisible="true" maxHeight="570.0" maxWidth="840.0" minHeight="570.0" minWidth="840.0" prefHeight="570.0" prefWidth="840.0" BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -73,8 +73,13 @@
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button fx:id="buttonAdd1" layoutX="245.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd1" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button layoutX="362.0" layoutY="155.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd1" layoutX="230.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd1" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd2" layoutX="350.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd3" layoutX="470.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd4" layoutX="590.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd5" layoutX="710.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd6" layoutX="830.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd7" layoutX="950.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
          </children>
       </Pane>
    </top>
