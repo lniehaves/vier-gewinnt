@@ -37,7 +37,7 @@
          <children>
             <Button fx:id="buttonMultiplayer" layoutX="50.0" layoutY="75.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="Mehrspieler" />
             <Button fx:id="buttonSingleplayer" layoutX="50.0" layoutY="20.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="Einzelspieler" />
-            <Button fx:id="buttonExit" layoutX="50.0" layoutY="130.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" style="-fx-pref-width: 80;" text="EXIT" textAlignment="JUSTIFY" textFill="#ff3b3b" />
+            <Button fx:id="buttonExit" layoutX="50.0" layoutY="130.0" mnemonicParsing="false" onAction="#handlebuttonExit" scaleX="2.0" scaleY="2.0" style="-fx-pref-width: 80;" text="EXIT" textAlignment="JUSTIFY" textFill="#ff3b3b" />
             <Label fx:id="labelSpielerRot" layoutX="200.0" layoutY="15.0" text="Spieler Rot:" textAlignment="JUSTIFY" textFill="RED">
                <font>
                   <Font size="22.0" />
@@ -74,12 +74,12 @@
                </font>
             </Label>
             <Button fx:id="buttonAdd1" layoutX="230.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd1" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button fx:id="buttonAdd2" layoutX="350.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button fx:id="buttonAdd3" layoutX="470.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button fx:id="buttonAdd4" layoutX="590.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button fx:id="buttonAdd5" layoutX="710.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button fx:id="buttonAdd6" layoutX="830.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
-            <Button fx:id="buttonAdd7" layoutX="950.0" layoutY="160.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd2" layoutX="350.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd2" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd3" layoutX="470.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd3" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd4" layoutX="590.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd4" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd5" layoutX="710.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd5" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd6" layoutX="830.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd6" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd7" layoutX="950.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd7" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
          </children>
       </Pane>
    </top>
