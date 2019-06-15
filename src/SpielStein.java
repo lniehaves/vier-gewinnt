@@ -7,7 +7,11 @@ public class SpielStein extends Circle {
 	private int posY;
 	
 	public SpielStein(boolean farbe, int posX, int posY) {
+		
 		super(60+ posX*120, 47.5+posY*95,40);
+		this.farbe = farbe;
+		this.posX = posX;
+		this.posY = posY;
 		if(farbe)
 		{
 			this.setStyle("-fx-background-color:#0000ff");
@@ -16,12 +20,10 @@ public class SpielStein extends Circle {
 		{
 			this.setStyle("-fx-background-color:#ff0000");
 		}
-		this.farbe = farbe;
-		this.posX = posX;
-		this.posY = posY;
+		
 	}
 
-	public boolean isFarbe() {
+	public boolean getFarbe() {
 		return farbe;
 	}
 

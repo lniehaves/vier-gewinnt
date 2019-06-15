@@ -57,7 +57,13 @@ public class MainApp extends Application
     {
     	if(feld[posX][0]== null)
     	{
-    		feld[posX][0] = new SpielStein(farbe,posX,0);
+    		for(int i = 0; i<6;i++)
+    		{
+    			if(SpielStein[posX][i]!= null)
+    			{
+    				feld[posX][i-1] = new SpielStein(farbe,posX,i-1);
+    			}
+    		}
     	}
     	else {
     		Controller.setEventText("Spalte ist bereits voll!");
@@ -71,49 +77,49 @@ public class MainApp extends Application
 		launch(args);
 	}
 	
-	private void Sieg(int zeile; boolean spielerfarbe) {
+	private boolean Sieg(SpielStein stein) {
 		int zähler =0;
 		boolean gewonnen = false
 				
 		//horizontal		
-		for (int i=-3;i <3;i++) {
+		for (int i=-3;i <=3;i++) {
 	    if(zeile+i>0 && zeile+i< 6) {
-		if (Spielfeld[zeile+i][spalte].getboolean == spielerfarbe{zähler++; };
-		else {zähler =0;};
-		if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+	    	if (SpielStein[zeile+i][spalte].getFarbe() == stein.getFarbe(){zähler++; };
+	    	else {zähler =0;};
+		if(zähler =4) {gewonnen = true;}
 	    }
 		}
 		
 		//vertikal
-		for (int j=-3;j <3;j++) {
+		for (int j=-3;j <=3;j++) {
 			if(spalte+j>0 && spalte+j< 7) {
-			if (Spielfeld[zeile][spalte+j].getboolean == spielerfarbe{zähler++};
-			else {zähler =0;};
-			if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+				if (SpielStein[zeile][spalte+j].getFarbe() == stein.getFarbe(){zähler++};
+				else {zähler =0;};
+			if(zähler =4) {gewonnen = true;}
 			}
 			}
 		
 		//Diagonal-links-rechts
-		for (int i=-3;i <3;i++) {
+		for (int i=-3;i <=3;i++) {
 		    if(zeile+i>0 && zeile+i< 6 && spalte+i>0 && spalte+i< 7) {
 		    	
-			if (Spielfeld[zeile+i][spalte+i].getboolean == spielerfarbe{zähler++; };
-			else {zähler =0;};
-			if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+		    	if (SpielStein[zeile+i][spalte+i].getFarbe() == stein.getFarbe(){zähler++; };
+		    	else {zähler =0;};
+			if(zähler =4) {gewonnen= true;}
 		    }
 			}
 		
 		//Diagonal-rechts-links
-		for (int i=-3;i <3;i++) {
+		for (int i=-3;i <=3;i++) {
 		    if(zeile+i>0 && zeile+i< 6 && spalte+i>0 && spalte+i< 7) {
 		    	
-			if (Spielfeld[zeile+i][spalte-i].getboolean == spielerfarbe{zähler++; };
-			else {zähler =0;};
-			if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+		    	if (SpielStein[zeile+i][spalte-i].getFarbe() == stein.getFarbe(){zähler++; };
+		    	else {zähler =0;};
+			if(zähler =4) {gewonnen= true;}
 		    }
 			}
 		
-		
+		return gewonnen;
 	}
 	
 }
