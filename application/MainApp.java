@@ -70,4 +70,50 @@ public class MainApp extends Application
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+	private void Sieg(int zeile; boolean spielerfarbe) {
+		int zähler =0;
+		boolean gewonnen = false
+				
+		//horizontal		
+		for (int i=-3;i <3;i++) {
+	    if(zeile+i>0 && zeile+i< 6) {
+		if (Spielfeld[zeile+i][spalte].getboolean == spielerfarbe{zähler++; };
+		else {zähler =0;};
+		if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+	    }
+		}
+		
+		//vertikal
+		for (int j=-3;j <3;j++) {
+			if(spalte+j>0 && spalte+j< 7) {
+			if (Spielfeld[zeile][spalte+j].getboolean == spielerfarbe{zähler++};
+			else {zähler =0;};
+			if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+			}
+			}
+		
+		//Diagonal-links-rechts
+		for (int i=-3;i <3;i++) {
+		    if(zeile+i>0 && zeile+i< 6 && spalte+i>0 && spalte+i< 7) {
+		    	
+			if (Spielfeld[zeile+i][spalte+i].getboolean == spielerfarbe{zähler++; };
+			else {zähler =0;};
+			if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+		    }
+			}
+		
+		//Diagonal-rechts-links
+		for (int i=-3;i <3;i++) {
+		    if(zeile+i>0 && zeile+i< 6 && spalte+i>0 && spalte+i< 7) {
+		    	
+			if (Spielfeld[zeile+i][spalte-i].getboolean == spielerfarbe{zähler++; };
+			else {zähler =0;};
+			if(zähler =4) {System.out.println("Spiel gewonnen");gewonnen = true;}
+		    }
+			}
+		
+		
+	}
+	
 }
