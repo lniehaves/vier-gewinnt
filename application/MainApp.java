@@ -19,7 +19,9 @@ public class MainApp extends Application
 	private Stage primaryStage;
     private BorderPane rootLayout;
    SpielStein[][] feld = new SpielStein[7][6];
-   
+   int blauesteine=0;
+   int rotesteine=0;
+  SpielStein aktuellerSpielstein;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -49,9 +51,39 @@ public class MainApp extends Application
     }
    
     
+    
+    
+   
+    
     public Stage getPrimaryStage() {
         return primaryStage;
     }
+    
+    
+    boolean farbeändern(boolean farbe2,boolean geändert) {
+    	
+    	if(farbe2 ==true && geändert==false) {farbe2 = false;
+		geändert =true;}
+		if(farbe2 ==false && geändert==false) {farbe2 = true;
+		geändert=true;}
+    	
+		return farbe2;
+    	
+    }
+    
+    
+    SpielStein getaktuellenSpielstein() {
+    	return aktuellerSpielstein;
+    }
+    
+    void Maximum() {
+    	if (blauesteine ==21 || rotesteine==21) {
+        Controller.labelEventHandling.setText("Spiel beendet-Unentschieden");
+        //hier fehlt noch der Stopp des Systems
+    	}
+    }
+    
+    
     
     void spielSteinErstellen(boolean farbe,int posX)
     {
@@ -61,7 +93,13 @@ public class MainApp extends Application
     		{
     			if(SpielStein[posX][i]!= null)
     			{
+    				
     				feld[posX][i-1] = new SpielStein(farbe,posX,i-1);
+    				//aktuellen Spielstein aktualisieren und Anzahl gesetzter Steine "+1"
+    				aktuellerSpielstein = feld[posX][i-1];
+    				if(farbe ==true) {blauesteine++;}
+    				if(farbe ==false) {rotesteine++;}
+    				
     			}
     		}
     	}
@@ -121,5 +159,9 @@ public class MainApp extends Application
 		
 		return gewonnen;
 	}
+	
+	
+	
+	
 	
 }

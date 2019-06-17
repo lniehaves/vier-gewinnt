@@ -1,11 +1,22 @@
 package application;
 
+import java.util.concurrent.TimeUnit;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 
 public class Controller 
 {
+	
+	boolean SpielerFarbe = true;
+	boolean geändert;
+	
+	
+	
+	
+	
+	
 	private MainApp mainApp_temp = new MainApp();
 	
 	@FXML
@@ -43,6 +54,26 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd1(ActionEvent event) {
+		
+		geändert =false;
+		spielSteinErstellen(SpielerFarbe,0);
+		
+		
+		
+		//Siegbedingung überprüfen
+		if (Sieg(Main.getaktuellerSpielstein()) = true) {
+			this.labelEventHandling.setText("Spiel beendet-Gewonnen");
+			TimeUnit.MILLISECONDS.sleep(1000);
+			if(Main.getaktuellerSpielstein().getFarbe()= true) {this.labelEventHandling.setText("Sieg: Spieler Blau");}
+			if(Main.getaktuellerSpielstein().getFarbe()= false) {this.labelEventHandling.setText("Sieg: Spieler Rot");}
+		}
+		
+		//Unentschieden überprüfen(21Steine gesetzt)
+		Maximum();
+		
+		SpielerFarbe= farbeändern(SpielerFarbe,geändert);
+		
+		
 		
 	}
 	
