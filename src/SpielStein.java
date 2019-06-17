@@ -5,10 +5,12 @@ public class SpielStein extends Circle {
 	private boolean farbe;
 	private int posX;
 	private int posY;
+	boolean verbunden;
 	
 	public SpielStein(boolean farbe, int posX, int posY) {
 		
 		super(60+ posX*120, 47.5+posY*95,40);
+		verbunden = true;
 		this.farbe = farbe;
 		this.posX = posX;
 		this.posY = posY;
@@ -27,6 +29,13 @@ public class SpielStein extends Circle {
 		return farbe;
 	}
 
+	public boolean getVerbunden() {
+		return verbunden;
+	}
+	public void setVerbunden(boolean verbunden) {
+		this.verbunden= verbunden;
+	}
+	
 	public void setFarbe(boolean farbe) {
 		this.farbe = farbe;
 	}

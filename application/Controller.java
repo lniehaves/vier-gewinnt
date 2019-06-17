@@ -61,11 +61,14 @@ public class Controller
 		
 		
 		//Siegbedingung überprüfen
-		if (Sieg(Main.getaktuellerSpielstein()) = true) {
+		if (Sieg(Main.getaktuellerSpielstein()) = true && verbunden()== false) {
 			this.labelEventHandling.setText("Spiel beendet-Gewonnen");
 			TimeUnit.MILLISECONDS.sleep(1000);
 			if(Main.getaktuellerSpielstein().getFarbe()= true) {this.labelEventHandling.setText("Sieg: Spieler Blau");}
 			if(Main.getaktuellerSpielstein().getFarbe()= false) {this.labelEventHandling.setText("Sieg: Spieler Rot");}
+		}
+		if (Sieg(Main.getaktuellerSpielstein()) = true && Main.alleverbunden(getaktuellerSpielstein)== true) {
+			this.labelEventHandling.setText("Spiel beendet-Unentschieden(Verbunden)");
 		}
 		
 		//Unentschieden überprüfen(21Steine gesetzt)

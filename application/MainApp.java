@@ -60,6 +60,52 @@ public class MainApp extends Application
     }
     
     
+    boolean alleverbunden(SpielStein Referenzstein) {
+    	
+    //link= true Bedingung für Unentschieden
+    	boolean link = true;
+    	
+    	//setze verbunden
+    	for(int i = 0; i<6;i++)
+		{
+    		//horizontal spalten durchsuchen
+    		for(int j = 0; j<7;j++) 
+    		{
+    		//Farbüberprüfung des Steines
+    			if(SpielStein[j][i].getFarbe() == Referenzstein.getFarbe())
+    			{
+    				if(SpielStein[j+1][i].getFarbe() == SpielStein[j][i].getFarbe() || SpielStein[j-1][i].getFarbe() == SpielStein[j][i].getFarbe() ||SpielStein[j][i+1].getFarbe() == SpielStein[j][i].getFarbe()||SpielStein[j][i-1].getFarbe() == SpielStein[j][i].getFarbe()||SpielStein[j-1][i-1].getFarbe() == SpielStein[j][i].getFarbe()||SpielStein[j+1][i+1].getFarbe() == SpielStein[j][i].getFarbe()||SpielStein[j+1][i-1].getFarbe() == SpielStein[j][i].getFarbe()||SpielStein[j-1][i+1].getFarbe() == SpielStein[j][i].getFarbe())
+    				{
+    					SpielStein[j][i].setVerbunden =true;
+    				}
+    			}
+    		}
+		}
+    
+    	//link als hinreichende Bedingung(alleSteine haben verbunden= true)
+    	for(int i = 0; i<6;i++)
+		{
+    		//horizontal spalten durchsuchen
+    		for(int j = 0; j<7;j++) 
+    		{
+    		//Farbüberprüfung des Steines
+    			if(SpielStein[j][i].getFarbe() == Referenzstein.getFarbe())
+    			{
+    				if( SpielStein[j][i].getVerbunden()  == false)
+    				{
+    					link = false;
+    					return link;
+    				}
+    			}
+    		}
+		}
+    	
+    	return link;
+    }
+    
+    
+    
+    
     boolean farbeändern(boolean farbe2,boolean geändert) {
     	
     	if(farbe2 ==true && geändert==false) {farbe2 = false;
@@ -84,7 +130,7 @@ public class MainApp extends Application
     }
     
     
-    
+    //spalte zeile[] [] tauschen nicht einheitlich
     void spielSteinErstellen(boolean farbe,int posX)
     {
     	if(feld[posX][0]== null)
