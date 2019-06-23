@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <center>
+      <GridPane gridLinesVisible="true" maxHeight="570.0" maxWidth="840.0" minHeight="570.0" minWidth="840.0" prefHeight="570.0" prefWidth="840.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="200.0" right="200.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Circle fx:id="stein1" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" />
+            <Circle fx:id="stein8" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.rowIndex="1" />
+            <Circle fx:id="stein15" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.rowIndex="2" />
+            <Circle fx:id="stein22" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.rowIndex="3" />
+            <Circle fx:id="stein29" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.rowIndex="4" />
+            <Circle fx:id="stein36" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.rowIndex="5" />
+            <Circle fx:id="stein2" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="1" />
+            <Circle fx:id="stein9" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Circle fx:id="stein16" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Circle fx:id="stein23" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Circle fx:id="stein30" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Circle fx:id="stein37" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Circle fx:id="stein3" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="2" />
+            <Circle fx:id="stein10" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Circle fx:id="stein17" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Circle fx:id="stein24" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Circle fx:id="stein31" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Circle fx:id="stein38" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Circle fx:id="stein39" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Circle fx:id="stein32" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Circle fx:id="stein25" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Circle fx:id="stein18" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Circle fx:id="stein11" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Circle fx:id="stein4" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="3" />
+            <Circle fx:id="stein5" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="4" />
+            <Circle fx:id="stein12" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Circle fx:id="stein19" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Circle fx:id="stein26" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Circle fx:id="stein33" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Circle fx:id="stein40" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Circle fx:id="stein6" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="5" />
+            <Circle fx:id="stein13" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Circle fx:id="stein20" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Circle fx:id="stein27" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Circle fx:id="stein34" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Circle fx:id="stein41" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Circle fx:id="stein7" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="6" />
+            <Circle fx:id="stein14" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Circle fx:id="stein21" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Circle fx:id="stein28" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Circle fx:id="stein35" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Circle fx:id="stein42" fill="BLUE" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-opacity: 100;" translateX="20.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonMultiplayer" layoutX="50.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleButtonMultiPlayer" scaleX="2.0" scaleY="2.0" text="Mehrspieler" />
+            <Button fx:id="buttonSingleplayer" layoutX="50.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleButtonSinglePlayer" scaleX="2.0" scaleY="2.0" text="Einzelspieler" />
+            <Button fx:id="buttonExit" layoutX="50.0" layoutY="130.0" mnemonicParsing="false" onAction="#handlebuttonExit" scaleX="2.0" scaleY="2.0" style="-fx-pref-width: 80;" text="EXIT" textAlignment="JUSTIFY" textFill="#ff3b3b" />
+            <Label fx:id="labelSpielerRot" layoutX="200.0" layoutY="15.0" text="Spieler Rot:" textAlignment="JUSTIFY" textFill="RED">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSpielerBlau" layoutX="400.0" layoutY="15.0" text="Spieler Blau:" textAlignment="JUSTIFY" textFill="BLUE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelRemainingRed" graphicTextGap="0.0" layoutX="250.0" layoutY="70.0" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelRemainingBlue" layoutX="450.0" layoutY="70.0" textFill="BLUE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPointsRed" layoutX="330.0" layoutY="15.0" text="0" textFill="RED">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPointsBlue" layoutX="530.0" layoutY="15.0" text="0" textFill="BLUE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEventHandling" layoutX="712.0" layoutY="22.0">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonAdd1" layoutX="230.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd1" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd2" layoutX="350.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd2" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd3" layoutX="470.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd3" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd4" layoutX="590.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd4" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd5" layoutX="710.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd5" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd6" layoutX="830.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd6" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Button fx:id="buttonAdd7" layoutX="950.0" layoutY="160.0" mnemonicParsing="false" onAction="#handlebuttonAdd7" scaleX="2.0" scaleY="2.0" text="+" textAlignment="JUSTIFY" />
+            <Label fx:id="labelEventHandling1" layoutX="712.0" layoutY="72.0">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
