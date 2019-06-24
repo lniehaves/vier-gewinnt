@@ -23,6 +23,8 @@ public class Controller
 	int pointsRed;
 	boolean farbe;
 	boolean gewonnen;
+	boolean multiplayer;
+	
 	
 	
 	@FXML
@@ -350,6 +352,7 @@ public class Controller
 		initialize();
 		buttonSingleplayer.setText("Neues Spiel");
 		buttonMultiplayer.setText("Neues Spiel");
+		multiplayer = false;
 		for(int i=0;i<7;i++)
 		{
 			for(int j=0;j<6;j++)
@@ -365,6 +368,7 @@ public class Controller
 		initialize();
 		buttonSingleplayer.setText("Neues Spiel");
 		buttonMultiplayer.setText("Neues Spiel");
+		multiplayer = true;
 		for(int i=0;i<7;i++)
 		{
 			for(int j=0;j<6;j++)
@@ -464,8 +468,69 @@ public class Controller
 		{
 			System.out.println("Zeile voll");
 			setEventText("Spalte ist Voll!-Wiederhole deinen Zug");
+			
+			
+			
 		}
+		
+		
+		
+		if(multiplayer == true ) {
+			//WARTE
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//WARTE ZUENDE
+			
+			Multiplayerzug();}
+		
 	}
+	
+	
+	
+	
+	public void Multiplayerzug() {
+		
+		
+		int x;
+		int y;
+		x = aktuellerStein.getPosX();
+		y = aktuellerStein.getPosY();
+		
+		//Multiplayer als Rot
+		if(aktuellerStein.getFarbe()==true) {
+			setEventText("Multiplayer rot spielt");
+		if(y!=0) {	steine[x][y-1].setFill(Color.RED);
+		feld[x][y-1] = new SpielStein(false,x,y-1);
+		steine[x][y-1].setStyle("-fx-opacity: 100");
+		
+		roteSteine++;
+		setEventText("Du(Blau) bist dran");
+		}
+	
+	
+		}
+		
+		
+		//Multiplayer als Blau
+		if(aktuellerStein.getFarbe()==false) {
+			setEventText("Multiplayer blau spielt");
+			if(y!=0) {steine[x][y-1].setFill(Color.BLUE);
+			feld[x][y-1] = new SpielStein(true,x,y-1);
+			steine[x][y-1].setStyle("-fx-opacity: 100");
+			
+			blaueSteine++;
+			setEventText("Du(Rot) bist dran");
+			}
+			
+			}
+	
+	}
+	
+	
 
 	public SpielStein getAktuellerStein() {
 		return aktuellerStein;
@@ -485,7 +550,9 @@ public class Controller
 	{
 		if(aktuellerStein.getFarbe()== true)
 			{
+			if(multiplayer ==false) {
 				farbe = false;
+				
 				buttonAdd1.setStyle("-fx-background-color:#ff0000");
 				buttonAdd2.setStyle("-fx-background-color:#ff0000");
 				buttonAdd3.setStyle("-fx-background-color:#ff0000");
@@ -493,10 +560,13 @@ public class Controller
 				buttonAdd5.setStyle("-fx-background-color:#ff0000");
 				buttonAdd6.setStyle("-fx-background-color:#ff0000");
 				buttonAdd7.setStyle("-fx-background-color:#ff0000");
+				}
 			}
 		else 
 			{
+			if(multiplayer ==false) {
 				farbe= true;
+				
 				buttonAdd1.setStyle("-fx-background-color:#0000ff");
 				buttonAdd2.setStyle("-fx-background-color:#0000ff");
 				buttonAdd3.setStyle("-fx-background-color:#0000ff");
@@ -504,6 +574,7 @@ public class Controller
 				buttonAdd5.setStyle("-fx-background-color:#0000ff");
 				buttonAdd6.setStyle("-fx-background-color:#0000ff");
 				buttonAdd7.setStyle("-fx-background-color:#0000ff");
+				}
 			}
 	}
 	
@@ -670,7 +741,7 @@ public class Controller
 			//prueft auf unentschieden mit farbe rot
 			if(checkForDraw(false))
 			{
-				setEventText("Unentschieden");
+				setEventText("Unentschieden2");
 				pointsBlue++;
 				pointsRed++;
 				setLabelPointsBlue(Integer.toString(pointsBlue));
@@ -687,7 +758,7 @@ public class Controller
 		{
 			if(checkForDraw(true))
 			{
-				setEventText("Unentschieden");
+				setEventText("Unentschieden2");
 				pointsBlue++;
 				pointsRed++;
 				setLabelPointsBlue(Integer.toString(pointsBlue));

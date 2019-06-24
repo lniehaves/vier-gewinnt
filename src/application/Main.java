@@ -28,6 +28,7 @@ public class Main extends Application {
             primaryStage.setScene(scene);
             primaryStage.setTitle("Vier Gewinnt");
 			primaryStage.show();
+			SpielStein a = new SpielStein(false,0,0);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
