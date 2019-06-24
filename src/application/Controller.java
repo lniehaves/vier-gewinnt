@@ -1,6 +1,6 @@
 package application;
 
-import javafx.scene.*;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
@@ -24,7 +24,6 @@ public class Controller
 	boolean farbe;
 	boolean gewonnen;
 	
-	private Main main_temp = new Main();
 	
 	@FXML
 	private Button buttonSingleplayer;
@@ -37,6 +36,24 @@ public class Controller
 	
 	@FXML 
 	private Button buttonAdd1;
+	
+	@FXML 
+	private Button buttonAdd2;
+	
+	@FXML 
+	private Button buttonAdd3;
+	
+	@FXML 
+	private Button buttonAdd4;
+	
+	@FXML 
+	private Button buttonAdd5;
+	
+	@FXML 
+	private Button buttonAdd6;
+	
+	@FXML 
+	private Button buttonAdd7;
 	
 	@FXML 
 	private Label labelSpielerRot;
@@ -457,8 +474,28 @@ public class Controller
 	
 	public void farbeWechseln()
 	{
-		if(aktuellerStein.getFarbe()== true)farbe = false;
-		else farbe= true;
+		if(aktuellerStein.getFarbe()== true)
+			{
+				farbe = false;
+				buttonAdd1.setStyle("-fx-background-color:#ff0000");
+				buttonAdd2.setStyle("-fx-background-color:#ff0000");
+				buttonAdd3.setStyle("-fx-background-color:#ff0000");
+				buttonAdd4.setStyle("-fx-background-color:#ff0000");
+				buttonAdd5.setStyle("-fx-background-color:#ff0000");
+				buttonAdd6.setStyle("-fx-background-color:#ff0000");
+				buttonAdd7.setStyle("-fx-background-color:#ff0000");
+			}
+		else 
+			{
+				farbe= true;
+				buttonAdd1.setStyle("-fx-background-color:#0000ff");
+				buttonAdd2.setStyle("-fx-background-color:#0000ff");
+				buttonAdd3.setStyle("-fx-background-color:#0000ff");
+				buttonAdd4.setStyle("-fx-background-color:#0000ff");
+				buttonAdd5.setStyle("-fx-background-color:#0000ff");
+				buttonAdd6.setStyle("-fx-background-color:#0000ff");
+				buttonAdd7.setStyle("-fx-background-color:#0000ff");
+			}
 	}
 	
 	public void initialize()
@@ -514,6 +551,28 @@ public class Controller
 		blaueSteine = 0;
 		roteSteine = 0;
 		gewonnen = false;
+		if(farbe == true)
+		{
+			farbe = false;
+			buttonAdd1.setStyle("-fx-background-color:#ff0000");
+			buttonAdd2.setStyle("-fx-background-color:#ff0000");
+			buttonAdd3.setStyle("-fx-background-color:#ff0000");
+			buttonAdd4.setStyle("-fx-background-color:#ff0000");
+			buttonAdd5.setStyle("-fx-background-color:#ff0000");
+			buttonAdd6.setStyle("-fx-background-color:#ff0000");
+			buttonAdd7.setStyle("-fx-background-color:#ff0000");
+		}
+	else 
+		{
+			farbe= true;
+			buttonAdd1.setStyle("-fx-background-color:#0000ff");
+			buttonAdd2.setStyle("-fx-background-color:#0000ff");
+			buttonAdd3.setStyle("-fx-background-color:#0000ff");
+			buttonAdd4.setStyle("-fx-background-color:#0000ff");
+			buttonAdd5.setStyle("-fx-background-color:#0000ff");
+			buttonAdd6.setStyle("-fx-background-color:#0000ff");
+			buttonAdd7.setStyle("-fx-background-color:#0000ff");
+		}
 	}
 
 	
@@ -653,7 +712,8 @@ public class Controller
 						{
 							if(feld[i+k][j].getFarbe()==farbe)
 							{
-								
+								System.out.println("feld: "+(i+k)+" "+j);
+								System.out.println("horizontal");
 								feld[i][j].setVerbunden(true);
 								break;
 							}
