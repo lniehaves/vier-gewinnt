@@ -224,11 +224,11 @@ public class Controller
 		 * gewinnpruefung
 		 * unentschiedenpruefung
 		 */
-		if(!gewonnen)
+		if(!gewonnen&& feld[0][0]==null)
 		{
 			steinErzeugen(0);
 			aktualisiereSteine();
-			farbeWechseln();
+
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -243,11 +243,10 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd2(ActionEvent event) {
-		if(!gewonnen)
+		if(!gewonnen&& feld[1][0]==null)
 		{
 			steinErzeugen(1);
 			aktualisiereSteine();
-			farbeWechseln();
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -260,11 +259,11 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd3(ActionEvent event) {
-		if(!gewonnen)
+		if(!gewonnen&& feld[2][0]==null)
 		{
 			steinErzeugen(2);
 			aktualisiereSteine();
-			farbeWechseln();
+
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -277,11 +276,11 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd4(ActionEvent event) {
-		if(!gewonnen)
+		if(!gewonnen&& feld[3][0]==null)
 		{
 			steinErzeugen(3);
 			aktualisiereSteine();
-			farbeWechseln();
+
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -294,11 +293,11 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd5(ActionEvent event) {
-		if(!gewonnen)
+		if(!gewonnen&& feld[4][0]==null)
 		{
 			steinErzeugen(4);
 			aktualisiereSteine();
-			farbeWechseln();
+
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -310,11 +309,11 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd6(ActionEvent event) {
-		if(!gewonnen)
+		if(!gewonnen&& feld[5][0]==null)
 		{
 			steinErzeugen(5);
 			aktualisiereSteine();
-			farbeWechseln();
+
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -326,11 +325,10 @@ public class Controller
 	
 	@FXML
 	private void handlebuttonAdd7(ActionEvent event) {
-		if(!gewonnen)
+		if(!gewonnen&& feld[6][0]==null)
 		{
 			steinErzeugen(6);
 			aktualisiereSteine();
-			farbeWechseln();
 			checkForWin(aktuellerStein);
 			Maximum();
 		}
@@ -350,6 +348,7 @@ public class Controller
 	@FXML
 	private void handleButtonSinglePlayer(ActionEvent event) {
 		initialize();
+		labelSpielerRot.setText("BOT");
 		buttonSingleplayer.setText("Neues Spiel");
 		buttonMultiplayer.setText("Neues Spiel");
 		multiplayer = false;
@@ -360,14 +359,21 @@ public class Controller
 				steine[i][j].setStyle("-fx-opacity:0");
 			}
 		}
+		if(!farbe)
+		{
+			singlePlayerzug();
+		}
 		
 	}
 	
 	@FXML
 	private void handleButtonMultiPlayer(ActionEvent event) {
+
+		
 		initialize();
 		buttonSingleplayer.setText("Neues Spiel");
 		buttonMultiplayer.setText("Neues Spiel");
+		labelSpielerRot.setText("Spieler Rot");
 		multiplayer = true;
 		for(int i=0;i<7;i++)
 		{
@@ -376,6 +382,7 @@ public class Controller
 				steine[i][j].setStyle("-fx-opacity:0");
 			}
 		}
+		
 		
 	}
 	
@@ -438,6 +445,7 @@ public class Controller
 						steine[posX][5].setFill(Color.RED);
 						steine[posX][5].setStyle("-fx-opacity: 100");
 					}
+					farbeWechseln();
 					if(aktuellerStein.getFarbe()==true )blaueSteine++;
 					else roteSteine++;
 					break;
@@ -457,6 +465,7 @@ public class Controller
 						steine[posX][i-1].setFill(Color.RED);
 						steine[posX][i-1].setStyle("-fx-opacity: 100");
 					}
+					farbeWechseln();
 					if(aktuellerStein.getFarbe()==true )blaueSteine++;
 					else roteSteine++;
 					break;
@@ -466,68 +475,77 @@ public class Controller
 		}
 		else
 		{
-			System.out.println("Zeile voll");
+			//System.out.println("Zeile voll");
 			setEventText("Spalte ist Voll!-Wiederhole deinen Zug");
-			
-			
-			
+					
 		}
 		
 		
 		
-		if(multiplayer == true ) {
-			//WARTE
-			try {
-				Thread.sleep(200);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			//WARTE ZUENDE
-			
-			Multiplayerzug();}
+		if(!multiplayer&& !farbe) 
+		{			
+			singlePlayerzug();
+		}
 		
 	}
 	
 	
 	
 	
-	public void Multiplayerzug() {
+	public void singlePlayerzug() {
 		
 		
-		int x;
-		int y;
-		x = aktuellerStein.getPosX();
-		y = aktuellerStein.getPosY();
+		int random = (int)(10*Math.random())+1;
 		
-		//Multiplayer als Rot
-		if(aktuellerStein.getFarbe()==true) {
-			setEventText("Multiplayer rot spielt");
-		if(y!=0) {	steine[x][y-1].setFill(Color.RED);
-		feld[x][y-1] = new SpielStein(false,x,y-1);
-		steine[x][y-1].setStyle("-fx-opacity: 100");
-		
-		roteSteine++;
-		setEventText("Du(Blau) bist dran");
-		}
-	
-	
-		}
-		
-		
-		//Multiplayer als Blau
-		if(aktuellerStein.getFarbe()==false) {
-			setEventText("Multiplayer blau spielt");
-			if(y!=0) {steine[x][y-1].setFill(Color.BLUE);
-			feld[x][y-1] = new SpielStein(true,x,y-1);
-			steine[x][y-1].setStyle("-fx-opacity: 100");
+		switch(random)
+		{
+			case 1:
+				{
+					if(feld[0][0]==null) handlebuttonAdd1(null);
+					else singlePlayerzug();
+					break;
+				}
+			case 2:
+				{
+					if(feld[1][0]==null) handlebuttonAdd2(null);
+					else singlePlayerzug();
+					break;
+				}
+			case 3: 
+				{
+					if(feld[2][0]==null) handlebuttonAdd3(null);
+					else singlePlayerzug();
+					break;
+				}
+			case 4:
+				{
+					if(feld[3][0]==null) handlebuttonAdd4(null);
+					else singlePlayerzug();
+					break;
+				}
+			case 5:
+				{
+					if(feld[4][0]==null) handlebuttonAdd5(null);
+					else singlePlayerzug();
+					break;
+				}
+			case 6: 
+				{
+					if(feld[5][0]==null) handlebuttonAdd6(null);
+					else singlePlayerzug();
+					break;
+				}
+			case 7:
+				{
+					if(feld[6][0]==null) handlebuttonAdd7(null);
+					else singlePlayerzug();
+					break;
+				}
+				
+			default:singlePlayerzug();break;
 			
-			blaueSteine++;
-			setEventText("Du(Rot) bist dran");
-			}
-			
-			}
-	
+		}
+		
 	}
 	
 	
@@ -741,7 +759,7 @@ public class Controller
 			//prueft auf unentschieden mit farbe rot
 			if(checkForDraw(false))
 			{
-				setEventText("Unentschieden2");
+				setEventText("Unentschieden");
 				pointsBlue++;
 				pointsRed++;
 				setLabelPointsBlue(Integer.toString(pointsBlue));
@@ -758,7 +776,7 @@ public class Controller
 		{
 			if(checkForDraw(true))
 			{
-				setEventText("Unentschieden2");
+				setEventText("Unentschieden");
 				pointsBlue++;
 				pointsRed++;
 				setLabelPointsBlue(Integer.toString(pointsBlue));
@@ -792,8 +810,6 @@ public class Controller
 						{
 							if(feld[i+k][j].getFarbe()==farbe)
 							{
-								System.out.println("feld: "+(i+k)+" "+j);
-								System.out.println("horizontal");
 								feld[i][j].setVerbunden(true);
 								break;
 							}
