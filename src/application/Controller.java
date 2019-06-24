@@ -228,6 +228,7 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
 		else
 		{
@@ -246,6 +247,7 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
 		else
 		{
@@ -262,6 +264,7 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
 		else
 		{
@@ -278,6 +281,7 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
 		else
 		{
@@ -294,6 +298,7 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
 		else
 		{
@@ -309,6 +314,7 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
 		else
 		{
@@ -324,7 +330,9 @@ public class Controller
 			aktualisiereSteine();
 			farbeWechseln();
 			checkForWin(aktuellerStein);
+			Maximum();
 		}
+		
 		else
 		{
 			setEventText("Starte ein neues Spiel!");
@@ -455,6 +463,7 @@ public class Controller
 		else
 		{
 			System.out.println("Zeile voll");
+			setEventText("Spalte ist Voll!-Wiederhole deinen Zug");
 		}
 	}
 
@@ -782,6 +791,12 @@ public class Controller
 		
 		return link;
 	}
+	
+	       void Maximum() {
+	    	if (blaueSteine ==21 && roteSteine==21) {
+	    		setEventText("Alle Steine gelegt-Unentschieden");
+	        //hier fehlt noch der Stopp des Systems
+	    	}}
 	
 }
 
